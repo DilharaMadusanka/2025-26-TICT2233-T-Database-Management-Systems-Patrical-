@@ -1,0 +1,9 @@
+CREATE DATABASE TICT2233db;
+USE TICT2233db;
+CREATE TABLE Student(
+    student_id INT PRIMARY KEY,
+    First_Name VARCHAR(50) NOT NULL,
+    Last_Name VARCHAR(50) NOT NULL,
+    Date_Of_Birth DATE,
+    GPA DECIMAL(3,2)
+);
