@@ -25,3 +25,5 @@ INSERT INTO Student (student_id, first_name, last_name, date_of_birth, gpa) VALU
 (10, 'Julia', 'White', '2004-02-14', 3.60);
 
 SELECT * FROM Student;
+
+ALTER TABLE Student MODIFY COLUMN First_Name VARCHAR(100);
