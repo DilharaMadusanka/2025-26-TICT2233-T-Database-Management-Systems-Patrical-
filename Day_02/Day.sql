@@ -27,3 +27,21 @@ INSERT INTO Student (student_id, first_name, last_name, date_of_birth, gpa) VALU
 SELECT * FROM Student;
 
 ALTER TABLE Student MODIFY COLUMN First_Name VARCHAR(100);
+
+alter table Student modify column Last_Name VARCHAR(100);
+
+alter table Student add column Cource_Name VARCHAR(20);
+
+UPDATE Student 
+SET cource_name = CASE 
+    WHEN student_id = 1 THEN 'ICT'
+    WHEN student_id = 2 THEN 'ET'
+    WHEN student_id = 3 THEN 'BST'
+    WHEN student_id = 4 THEN 'ICT'
+    WHEN student_id = 5 THEN 'ET'
+    WHEN student_id = 6 THEN 'BST'
+    WHEN student_id = 7 THEN 'ICT'
+    WHEN student_id = 8 THEN 'ET'
+    WHEN student_id = 9 THEN 'BST'
+    WHEN student_id = 10 THEN 'ICT'
+END;
