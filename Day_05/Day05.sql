@@ -1,1 +1,2 @@
-D
+
+create database HospitalDB;
