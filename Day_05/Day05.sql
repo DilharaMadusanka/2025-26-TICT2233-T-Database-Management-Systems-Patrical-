@@ -70,3 +70,52 @@ group by TreatmentCost desc;
 //Q10
 select Max(TreatmentCost)
 from Patient;
+
+//Q11
+select Sum(TreatmentCost)
+as Total_Treatment_Cost
+from patient;
+
+//Q12
+select AVG(TreatmentCost)
+as Average_Treatment_Cost_Of_Diabetes
+from patient
+where Disease = 'Diabetes';
+
+//Q13
+select count(*)
+as Number_Of_Patient
+from patient;
+
+//Q14
+select sum(TreatmentCost)
+as Total_Treatment_Cost_Of_Diseases
+from patient
+group by Disease;
+
+//Q15
+select City,count(*)
+as Number_Of_Patient_Each_City
+from patient
+group by City;
+
+//Q16
+select Disease,AVG(TreatmentCost)
+as Average_Treatment_Cost_Of_Diseases
+from patient
+where TreatmentCost > 5000
+order by Average_Treatment_Cost_Of_Diseases desc;
+
+//Q17
+update patient
+set TreatmentCost = '6000'
+where PatientID = '101';
+
+//Q18
+ alter table Patient 
+ add RoomNumber INT;
+
+alter table Patient 
+modify RoomNumber VARCHAR;
+
+UPDATE Patient SET RoomNumber = PatientID - 100;
